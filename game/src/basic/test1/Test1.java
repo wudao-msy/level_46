@@ -34,5 +34,6 @@ public class Test1 {
         else{
             System.out.println("不是闰年");
         }
+        System.out.println("123");
     }
 }
