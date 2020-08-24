@@ -61,7 +61,7 @@
 <div id="main">
 
     <div id="main_l">
-        <a href="${pageContext.request.contextPath}/front/plug/VerifyPassport" class="c_hei cet_banner01">
+        <a href="https://passport.neea.cn/CETLogin?ReturnUrl=http://cet-bm.neea.cn/Home/VerifyPassport/?LoginType=0" class="c_hei cet_banner01">
             <p class="f20">进入报名</p>
             <p class=" ">ENTRY</p>
         </a>
