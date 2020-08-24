@@ -1,0 +1,8 @@
+com\njfu\realm\MyRealm4.class
+permission\BitPermission.class
+com\njfu\realm\MyRealm3.class
+com\njfu\realm\MyRealm2.class
+com\njfu\realm\MyRealm1.class
+permission\MyRolePermissionResolver.class
+com\njfu\realm\MyRealm.class
+permission\BitAndWildPermissionResolver.class

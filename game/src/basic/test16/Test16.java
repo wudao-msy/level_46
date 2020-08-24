@@ -1,5 +1,8 @@
 package basic.test16;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  * Author:msy
  * Date:2020-08-13 11:12
@@ -25,6 +28,40 @@ package basic.test16;
  */
 public class Test16 {
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        ArrayList<Integer> list=new ArrayList<>();
+        boolean flag;
+        for(int i=2;i<=b;i++){
+            flag=false;
+            for(int j=2;j<i;j++){
+                if(i%j==0){
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag==false){
+                list.add(i);
+            }
+        }
+        int c[]=new int[list.size()];
+        for(int i=0;i<list.size();i++){
+            c[i]=list.get(i);
+            System.out.print(c[i]+" ");
+        }
 
+        for(int i=a;i<=b;i++){
+            flag=false;
+            for(int j=2;j<i;j++){
+                if(i%j==0){
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag==false){
+                list.add(i);
+            }
+        }
     }
 }

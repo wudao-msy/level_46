@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置Spring整合shiro -->
+    <!-- 配置安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!-- 自己编写一个realm域对象 -->
+        <property name="realm" ref="authRealm"/>
+    </bean>
+
+    <!-- 编写realm类 -->
+    <bean id="authRealm" class="com.zte.level_46.backend.shiro.AuthRealm">
+        <!-- 注入密码比较器对象 -->
+        <property name="credentialsMatcher" ref="customCredentialsMatcher"/>
+    </bean>
+
+    <!-- 密码比较器类 -->
+    <bean id="customCredentialsMatcher" class="com.zte.level_46.backend.shiro.CustomCredentialsMatcher"/>
+
+    <!-- Spring框架需要整合shiro安全框架 -->
+    <!-- Shiro的Web过滤器 -->
+    <!--
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <property name="loginUrl" value="/login"/>
+        <property name="filterChainDefinitions">
+            <value>
+                /login = authc
+                /logout = logout
+                /authenticated = authc
+                /** = user,sysUser
+            </value>
+        </property>
+    </bean>
+    -->
+    <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!-- 生成代理，通过代理进行控制 -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"
+          depends-on="lifecycleBeanPostProcessor">
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
+
+    <!-- 安全管理器 -->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
+
+</beans>

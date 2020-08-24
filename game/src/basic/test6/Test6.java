@@ -1,5 +1,7 @@
 package basic.test6;
 
+import java.util.Scanner;
+
 /**
  * Author:msy
  * Date:2020-08-12 16:50
@@ -46,4 +48,25 @@ package basic.test6;
  * 1 <= n <= 34。
  */
 public class Test6 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[][]=new int[n][n];
+        for(int i=0;i<n;i++){
+            a[i][0]=1;
+            for(int j=0;j<=i;j++){
+                if(i==j){
+                    a[i][j]=1;
+                }
+                if(i>=1&&j>=1&&j<i){
+                    a[i][j]=a[i-1][j]+a[i-1][j-1];
+                }
+
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println("");
+        }
+
+
+    }
 }

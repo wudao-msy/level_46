@@ -2,6 +2,8 @@ package basic.test3;
 
 import java.util.Scanner;
 
+import static java.lang.Math.abs;
+
 /**
  * Author:msy
  * Date:2020-08-12 14:05
@@ -36,27 +38,17 @@ import java.util.Scanner;
  * 1 <= n, m <= 26。
  */
 public class Test3 {
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    int m=sc.nextInt();
-    String  num[][]=new String[n][m];
-
-
     public static void main(String[] args) {
-        for(int i=0;i<5;i++){
-            for(int j=1;j<=i;j++){
-                System.out.print(j);
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int m=sc.nextInt();
+        String  num[][]=new String[n][m];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                System.out.print((char)Integer.parseInt(String.valueOf(65+abs(i-j))));
             }
             System.out.println();
         }
 
-        System.out.println("*****");
-
-        for(int i=5;i>=1;i--){
-            for(int j=1;j<=i;j++){
-                System.out.print(j);
-            }
-            System.out.println();
-        }
     }
 }

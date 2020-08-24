@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>全国大学英语四、六级考试成绩查询 - 中国教育考试网</title>
+    
+    
+    <link href="css/query.css?v=2" rel="stylesheet" type="text/css">
+    
+</head>
+<body>
+<div id="Body">
+
+    <div id="Content">
+        <div id="Content1">
+
+            <div id="query_param">
+                <div class="queryLeft" style="min-height: 660px;">
+                    <div class="c_tits"><span id="parm_sn"></span>成绩查询<!--  -输入查询条件 --></div>
+                    <p class="h2" style="font-size:14px;margin-bottom:35px;text-align:center;margin-top:-20px"><span
+                            id="parm_subn"></span></p>
+                    <div class="container">
+                        <ol>
+                            <li><span>准考证号：</span>
+                                <div>
+                                    <input type="text" id="ke" name="ke" value="" alt="准考证号"
+                                </div>
+                                <em class='tips' id="zkzherror"></em></li>
+                            <li class="tip_n"><span>&nbsp;</span>
+                                <div>请输入15位笔试或口试准考证号</div>
+                            </li>
+                            <li><span>姓名：</span>
+                                <div>
+                                    <input type="text" id="name" name="name" value="" alt="姓名">
+                                </div>
+                                <em class='tips' id="nameerror"></em></li>
+                            <li class="tip_n"><span>&nbsp;</span>
+                                <div>姓名超过3个字，可只输入前3个</div>
+                            </li>
+                        
+                           
+                        </ol>
+
+                        <div class="s3">
+                            <button type="button" value="查询" id="submitButton" style="cursor:hand;">
+                            <input type="button" name="button" id="button" value="重填">
+                            <input type="button" value="返回"
+                                   onclick="javascript:window.open('http://cjcx.neea.edu.cn/','_self')"
+                                   style="cursor:pointer">
+                        </div>
+
+                        <div id="onlyCet46Remark" style="padding: 20px 0px;margin-left: 195px;display: none;">
+                            <p style="color: red;margin-bottom: 10px">注：若考生的口试成绩为D等，则成绩报告单上不报道其口试成绩。</p>
+                            <p id="NCP" style="color: red;line-height:150%;margin-bottom: 10px;padding-left: 28px;width: 450px;">受疫情影响，本次考试成绩报告单制作和下发工作将有所延迟，具体领取时间请以各考点通知为准。另，疫情期间，电话客服人员有限，咨询电话线路会较为繁忙，请耐心等待，感谢您的理解与支持。</p>
+                        </div>
+                        <div id="onlyCet46Remark_no_ncp" style="padding: 20px 52px;text-align: center;display: none;">
+                            <p style="color: red;margin-bottom: 10px">注：若考生的口试成绩为D等，则成绩报告单上不报道其口试成绩。</p>
+                        </div>
+                        <div id="allRemark" style="padding: 20px 0px;margin-left: 195px;display: none;">
+                            <p style="color: red;margin-bottom: 10px;">注：若考生的口试成绩为D等，则成绩报告单上不报道其口试成绩。</p>
+                            <p style="color: red;margin-bottom: 10px;padding-left: 28px;">
+                                以上查询包含日语四级、六级，德语四级、六级，俄语四级、六级和法语四级考试成绩。</p>
+                        </div>
+                        <div id="allRemark_del" style="padding: 20px 0px;margin-left: 195px;display: none;">
+                            <p style="color: red;margin-bottom: 10px;">注：</p>
+                            <p style="color: red;margin-bottom: 10px;padding-left: 27px;">
+                                若考生的口试成绩为D等，则成绩报告单上不报道其口试成绩。</p>
+                            <p style="color: red;margin-bottom: 10px;padding-left: 27px;">
+                                以上查询包含日语四级、六级，德语四级、六级，俄语四级、六级和法语四级考试成绩。</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="intr">
+                    <div class="intrtit" style="border-bottom: none;margin-bottom: 0px;"><i></i>常见问题</div>
+                    <ol class="problem" style="border-bottom: #ddd solid 1px;">
+                        <li>
+                            <span class="problem_tit">Q1：忘记准考证号怎么办？</span>
+                            <div class="problem_answer">
+                                <p><a target="_blank" href="http://cet-bm.neea.cn/Home/QueryTestTicket" style="color: #01adef;float: initial;float:none;">点击这里</a>查询。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem_tit">Q2：为什么笔试成绩为0？</span>
+                            <div class="problem_answer">
+                                <p>笔试成绩为0有以下几种情况：</p>
+                                <p>（1）缺考违规成绩为0分；</p>
+                                <p>（2）未缺考违规但成绩在220分以下则报道为0分；</p>
+                                <p>（3）未缺考违规但在考试过程中未粘贴条形码，则成绩为0分。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="problem_tit">Q3：如对成绩有异议怎么办？</span>
+                            <div class="problem_answer">
+                                <p>如对成绩有异议，可按规定进行分数核查，具体办法请见<a target="_blank" href="http://cet.neea.edu.cn/html1/folder/19081/5179-1.htm" style="color: #01adef;float: initial;float:none;">成绩核查</a>。</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <script>
+                        $(function(){
+                            $('.problem_tit').click(function(){
+                                if($(this).next('.problem_answer').css('display') == 'none'){
+                                    $(this).next('.problem_answer').show();
+                                }else{
+                                    $(this).next('.problem_answer').hide();
+                                }
+
+                            })
+                        })
+                    </script>
+                    <iframe src="http://www.neea.edu.cn/html1/report/17101/6429-1.htm" frameborder="0" scrolling="no"
+                            width="300" height="216"></iframe>
+                    <div class="intrtit" style="border-bottom: none;margin-bottom: 0px;margin-top: 8px;"><i></i>操作说明</div>
+                    <ul>
+                        <li style="margin-bottom: 10px;">
+                            1、输入准考证号和姓名，点击查询按钮进行查询。
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            2、如果输入信息正确，对应考试的成绩信息将会在下一个页面列出。
+                        </li>
+                        <!-- <li>
+                            3、页面上部操作步骤中橘黄色字体内容表示您所处的查询位置。
+                        </li> -->
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="clear"></div>
+            <div id="query_result" style="display:none">
+                <div class="c_tits"><span id="sn"></span> - 查看成绩</div>
+                <div class="container" style="padding-bottom:10px">
+
+                    <div class="score" id="cet46_t" style="display:none">
+                        <div id="score_tit">
+                            <ul class="clist">
+                                <li><strong>姓　　名：</strong><span id="n"></span></li>
+                                <li><strong>学　　校：</strong><span id="x"></span></li>
+                            </ul>
+                        </div>
+                        <div id="score_write">
+                            <div class="titleT">笔试成绩</div>
+                            <ul class="clist">
+                                <li><strong>准考证号：</strong><span id="z"></span></li>
+                                <li><strong>总　　分：</strong><span id="s"></span></li>
+                            </ul>
+                            <div class="scoreT">
+                                <ul class="clist">
+                                    <li><strong>听　　　力：</strong><span id="l"></span></li>
+                                    <li><strong>阅　　　读：</strong><span id="r"></span></li>
+                                    <li><strong>写作和翻译：</strong><span id="w"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tipss" class="tipss" style="display:none;margin-bottom:15px">
+                            <p>该考生为听力残疾，听力部分免考，分数经折算计入笔试总分。</p>
+                        </div>
+                        <div id="score_oral">
+                            <div class="titleT">口试成绩</div>
+                            <ul class="clist">
+                                <li><strong>准考证号：</strong><span id="kyz"></span></li>
+                                <li><strong>等　　级：</strong><span id="kys"></span></li>
+                            </ul>
+                        </div>
+                        <div id="score_id" style="display: none;margin-top: 30px;">
+                            <!--<div class="titleT">成绩报告单</div>-->
+                            <ul class="clist">
+                                <li><strong style="width: 120px;">成绩报告单编号：</strong><span id="id"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- minority -->
+                    <div class="score" id="cet46_f" style="display:none">
+                        <ul class="clist">
+                            <li><strong>姓　　名：</strong><span id="m_n"></span></li>
+                            <li><strong>学　　校：</strong><span id="m_x"></span></li>
+                        </ul>
+                        <ul class="clist">
+                            <li><strong>准考证号：</strong><span id="m_z"></span></li>
+                            <li><strong>总　　分：</strong><span id="m_s"></span></li>
+                        </ul>
+                        <div id="m_tipss" class="tipss" style="display:none;margin-bottom:15px">
+                            <p>该考生为听力残疾，听力部分免考，分数经折算计入笔试总分。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="s3 hisbtn">
+                    <input type="button" value="返回" onclick="javascript:window.open('http://cjcx.neea.edu.cn/','_self')"
+                           style="cursor:pointer">
+                </div>
+            </div>
+            <!-- <div class="intr">
+                <div class="intrtit"><i></i>操作说明</div>
+                <ul>
+
+                      <li>1、查询完成。<br>
+                        <a href="javascript:goon();" style="color:brown">&lt;&lt;继续查询</a>
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+
+    </div>
+    <script type="text/javascript">getFooter();</script>
+</div>
+<div id="shadeDiv" class="shadeDiv" style="display: none;"><div class="lodcenter"><img src="../query/images/loading.gif"><br><br>正在查询成绩，请耐心等待...</div></div>
+</body>
+</html>
